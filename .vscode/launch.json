@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "gdb",
+            "request": "launch",
+            "name": "Launch Program (SSH - HOME)",
+            "target": "Client",
+            "cwd": "${workspaceRoot}",
+            "ssh": {
+                "host": "192.168.56.1",
+                "cwd": "/mnt/d/HUST/IT4060",
+                "user": "ngoc",
+                "password": "123",
+                "port": 22,
+                "useAgent": false,
+                "forwardX11": false
+            }
+        }
+    ]
+}
