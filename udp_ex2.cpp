@@ -15,8 +15,9 @@ char msg[1024];
 
 int main()
 {
+    const int broadcast_on = 1;
     int s = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
-
+    setsockopt(s, SOL_SOCKET, SO_BROADCAST, &broadcast_on, sizeof(broadcast_on));
     SOCKADDR_IN toaddr, myaddr;
 
     toaddr.sin_family = AF_INET;
@@ -40,7 +41,7 @@ int main()
         memset(msg, 0, sizeof(msg));
         SOCKADDR_IN sender; // ip ben gui
         socklen_t slen = sizeof(SOCKADDR);
-        int rev = recvfrom(s, msg, sizeof(msg) - 1, 0, (SOCKADDR*) &sender, &slen);
+        int rev = recvfrom(s, msg, sizeof(msg) - 1, 0, (SOCKADDR *)&sender, &slen);
         printf("Received %d byte from: %s: %s\n", rev, inet_ntoa(sender.sin_addr), msg);
     }
 }
