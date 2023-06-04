@@ -8,10 +8,10 @@
             "type": "gdb",
             "request": "launch",
             "name": "Launch Program (SSH - HOME)",
-            "target": "Client",
+            "target": "select_chatroom",
             "cwd": "${workspaceRoot}",
             "ssh": {
-                "host": "192.168.56.1",
+                "host": "192.168.99.1",
                 "cwd": "/mnt/d/HUST/IT4060",
                 "user": "ngoc",
                 "password": "123",

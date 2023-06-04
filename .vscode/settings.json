@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.embeddedhtml": "html",
         "cstdlib": "c",
         "array": "cpp",
         "atomic": "cpp",
@@ -67,6 +68,8 @@
         "thread": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "malloc.h": "c",
+        "unistd.h": "c"
     }
 }
